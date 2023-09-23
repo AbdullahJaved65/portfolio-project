@@ -1,0 +1,61 @@
+body {
+  color: #777777;
+  background-image: url("/resources/images/body-bg.png");
+  background-size: cover;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0% 5%;
+  /* padding-top: 1%; */
+}
+
+.navbar,
+.logo,
+.nav-links,
+.nav-links ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar,
+.nav-links {
+  flex-wrap: wrap;
+  align-content: center;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.logo {
+  width: 50%;
+}
+
+.logo img {
+  height: 20%;
+  margin-right: auto;
+  width: 20%;
+}
+
+.nav-links {
+  width: 50%;
+}
+
+.nav-links ul {
+  display: flex;
+  margin-left: auto;
+}
+
+.nav-links li {
+  list-style: none;
+  padding: 0.5% 14%;
+}
+
+.nav-links a {
+  color: black;
+  font: 700 14px/100px "Rubik", sans-serif;
+  text-decoration: none;
+}
+
+.nav-links .active{
+  color: #4458dc;;
+}
