@@ -1,7 +1,7 @@
 body {
   color: #777777;
   background-image: url("/resources/images/body-bg.png");
-  background-size: cover;
+  background-size: repeat;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   /* font-weight: 400; */
@@ -161,10 +161,11 @@ body {
 
 .about-me {
   display: grid;
+  height: 33.75rem;
   grid-template-columns: 50% 50%;
 }
 
-.about-me-img{
+.about-me-img {
   height: 65%;
   margin-left: 15%;
   transition: all 1s ease;
@@ -180,6 +181,49 @@ body {
   line-height: 1.15;
 }
 
-.about-me-heading p{
+.about-me-heading p {
   text-align: justify;
+}
+
+.skills-list {
+  display: grid;
+  /* height: 33.75rem; */
+  grid-template-rows: repeat(1fr);
+  margin-top: 5%;
+}
+
+.skills-list-heading {
+  color: black;
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.skills-icons ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+}
+
+.skills-icons a {
+  /* grid-template-rows: 1fr; */
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 60px;
+  color: #4458dc;
+  transition: 0.5s ease;
+}
+
+.skills-icons a:hover {
+  font-size: 50px;
+  color: #01fff4;
+  box-shadow: 0 0 #01fff4;
+}
+
+.companies{
+  display: grid;
 }
