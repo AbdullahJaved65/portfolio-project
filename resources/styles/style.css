@@ -52,10 +52,28 @@ body {
 
 .nav-links a {
   color: black;
-  font: 700 14px/100px "Rubik", sans-serif;
+  font: 700 16px/100px "Rubik", sans-serif;
   text-decoration: none;
 }
 
-.nav-links .active{
-  color: #4458dc;;
+.nav-links .active {
+  color: #4458dc;
+}
+
+.header {
+  display: grid;
+  color: black;
+  grid-template-columns: 60% 40%;
+}
+
+/* .left-header {
+} */
+
+.header-hello {
+font-size: 3rem;  
+}
+
+.header-img {
+  height: 75%;
+  /* width: 50%; */
 }
