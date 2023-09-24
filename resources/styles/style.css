@@ -4,7 +4,7 @@ body {
   background-size: cover;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  /* font-weight: 400; */
   line-height: 26px;
   margin: 0% 5%;
   /* padding-top: 1%; */
@@ -47,13 +47,18 @@ body {
 
 .nav-links li {
   list-style: none;
-  padding: 0.5% 14%;
+  padding: 0.5% 10%;
 }
 
 .nav-links a {
   color: black;
   font: 700 16px/100px "Rubik", sans-serif;
   text-decoration: none;
+  transition: all ease-in-out;
+}
+
+.nav-links a:hover {
+  border-bottom: 2.5px solid #4458dc;
 }
 
 .nav-links .active {
@@ -64,16 +69,101 @@ body {
   display: grid;
   color: black;
   grid-template-columns: 60% 40%;
+  height: 33.125rem;
 }
 
-/* .left-header {
-} */
+.left-header {
+  margin-top: 10%;
+}
 
 .header-hello {
-font-size: 3rem;  
+  font-size: 2rem;
+}
+
+.header-name {
+  font-size: 3.65rem;
 }
 
 .header-img {
-  height: 75%;
+  height: 55%;
+  margin-top: 15%;
+  transition: all 1s ease;
   /* width: 50%; */
+}
+
+.header-img:hover {
+  height: 60%;
+}
+
+.hire-me-btn {
+  border-radius: 5px;
+  background-origin: border-box;
+  background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%),
+    radial-gradient(circle at top left, #4458dc, #854fee);
+  border: double 2px transparent;
+  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  color: #fff;
+  display: inline-block;
+  letter-spacing: 0px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  height: 46px;
+  line-height: 46px;
+  outline: none !important;
+  margin-right: 5%;
+  text-align: center;
+  text-decoration: none;
+  width: 140px;
+}
+
+.hire-me-btn a {
+  transition: all 0.3s ease-in-out;
+}
+
+.hire-me-btn:hover {
+  background-image: linear-gradient(#ffffff, #ffffff),
+    radial-gradient(circle at top left, #4458dc, #854fee);
+  border: 2px solid #854fee;
+  color: #222222;
+  box-shadow: none;
+  background-clip: border-box;
+}
+
+.get-cv-btn {
+  border-radius: 5px;
+  background-image: linear-gradient(#ffffff, #ffffff),
+    radial-gradient(circle at top left, #4458dc, #854fee);
+  border: 2px solid rgba(118, 85, 225, 0.3);
+  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  color: #222222;
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  height: 46px;
+  line-height: 46px;
+  outline: none !important;
+  text-align: center;
+  text-decoration: none;
+  width: 140px;
+}
+
+.get-cv-btn:hover {
+  border-radius: 5px;
+  background-origin: border-box;
+  background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%),
+    radial-gradient(circle at top left, #4458dc, #854fee);
+  border: double 2px transparent;
+  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  color: #fff;
+}
+
+.about-me {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.about-me-img{
+  height: 50%;
 }
