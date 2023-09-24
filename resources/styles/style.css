@@ -165,5 +165,21 @@ body {
 }
 
 .about-me-img{
-  height: 50%;
+  height: 65%;
+  margin-left: 15%;
+  transition: all 1s ease;
+}
+
+.about-me-img:hover {
+  height: 70%;
+}
+
+.about-me-heading {
+  color: black;
+  font-size: 2.6rem;
+  line-height: 1.15;
+}
+
+.about-me-heading p{
+  text-align: justify;
 }
