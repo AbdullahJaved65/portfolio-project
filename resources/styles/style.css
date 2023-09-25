@@ -250,3 +250,92 @@ body {
   box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
   background: #fff;
 }
+
+.gallery-section {
+  margin-top: 12%;
+  text-align: center;
+}
+
+#myBtnContainer {
+  text-align: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  margin: 10px -16px;
+  text-align: center;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  display: none;
+  /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  background-color: #f9f9fd;
+  padding: 6% 2%;
+  transition: all 0.4s cubic-bezier(0.93, -0.3, 1, 1) 0s;
+}
+
+.content:hover {
+  box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
+  background: #fff;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border-radius: 5px;
+  background-image: linear-gradient(#ffffff, #ffffff),
+    radial-gradient(circle at top left, #4458dc, #854fee);
+  border: 2px solid rgba(118, 85, 225, 0.3);
+  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  color: #222222;
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  height: 46px;
+  line-height: 46px;
+  outline: none !important;
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 4%;
+  width: 140px;
+}
+
+.btn:hover {
+  border-radius: 5px;
+  background-origin: border-box;
+  background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%),
+    radial-gradient(circle at top left, #4458dc, #854fee);
+  border: double 2px transparent;
+  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  color: #fff;
+}
+
+.btn.active {
+  background-color: #666;
+  color: #222222;
+}
