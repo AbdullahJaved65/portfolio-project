@@ -226,8 +226,10 @@ body {
 }
 
 .experience-section {
+  color: black;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin: 0% 4%;
   text-align: center;
 }
 
@@ -236,7 +238,7 @@ body {
   border-radius: 5%;
   height: 26rem;
   margin: 0% 4%;
-  padding: 6% 4%;
+  padding: 5% 4%;
   transition: all 0.4s cubic-bezier(0.93, -0.3, 1, 1) 0s;
   /* width: 79%; */
 }
@@ -259,8 +261,10 @@ body {
 }
 
 .services-section {
+  color: black;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  margin: 0% 4%;
   text-align: center;
 }
 
@@ -268,7 +272,7 @@ body {
   background-color: #f9f9fd;
   border-radius: 5%;
   margin: 0% 4%;
-  padding: 6% 4%;
+  padding: 6% 4.5%;
   transition: all 0.4s cubic-bezier(0.93, -0.3, 1, 1) 0s;
   width: 79%;
 }
@@ -380,15 +384,16 @@ body {
   grid-row: 100%;
   height: 26.75rem;
   text-align: center;
-  padding: 3% 5%;
+  padding: 5% 5%;
   margin-top: 15%;
+  margin-bottom: 15%;
 }
 
 .contact-heading {
   color: #f9f9fd;
   font-size: 2.6rem;
   line-height: 1.25;
-  margin-top: 5%;
+  margin-top: 1.2%;
   margin-bottom: 5%;
   text-align: center;
 }
