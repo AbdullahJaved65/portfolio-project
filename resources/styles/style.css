@@ -452,3 +452,41 @@ input[type="submit"]:hover {
     radial-gradient(circle at top left, #4458dc, #854fee);
   color: #f9f9fd;
 }
+
+.footer-section {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, 25%);
+  height: 12rem;
+  justify-items: center;
+  /* text-align: center; */
+}
+
+.footer-section img {
+  margin-left: 3.55%;
+  height: 100%;
+  margin-bottom: 1.45%;
+}
+
+.footer-section a {
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #4458dc;
+  margin-left: 0.01%;
+  transition: 0.5s ease;
+}
+
+.footer-section a:hover {
+  font-size: 1.75rem;
+  color: #01fff4;
+  box-shadow: 0 0 #01fff4;
+}
+
+.footer-section p {
+  margin-top: 1.55%;
+  margin-left: 4%;
+}
