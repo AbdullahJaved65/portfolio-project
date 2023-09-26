@@ -27,6 +27,8 @@ body {
 
 .hamburger {
   display: none;
+  /* display: flex; */
+  flex-direction: column;
 }
 
 .bar {
@@ -37,6 +39,19 @@ body {
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
 }
+
+/* .hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 3px 0;
+} */
 
 .logo {
   width: 50%;
@@ -79,19 +94,6 @@ body {
 
 .mobile-nav {
   display: none;
-}
-
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #000;
-  margin: 3px 0;
 }
 
 .header {
@@ -536,8 +538,13 @@ input[type="submit"]:hover {
 }
 
 /* For screens between 992px and 1199px (large screens) */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   /* Add your specific styles for large screens here */
+
+  .hamburger {
+    display: none;
+  }
+
   .left-header {
     line-height: 1;
   }
@@ -556,7 +563,7 @@ input[type="submit"]:hover {
 }
 
 /* For screens between 768px and 991px (medium screens) */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 820px) {
   /* Add your specific styles for medium screens here */
   .navbar {
     display: flex;
@@ -567,6 +574,7 @@ input[type="submit"]:hover {
   }
 
   .hamburger {
+    text-align: right;
     display: block;
   }
 
@@ -583,12 +591,13 @@ input[type="submit"]:hover {
   }
 
   .nav-links {
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     position: fixed;
-    left: -100%;
+    left: -150%;
     top: 1px;
-    width: 119%;
+    width: 142%;
     text-align: center;
     transition: 0.3s;
   }
@@ -600,35 +609,503 @@ input[type="submit"]:hover {
   .nav-links.active {
     left: 0;
   }
-}
 
-/* For screens between 576px and 767px (small screens) */
-@media (min-width: 576px) and (max-width: 767px) {
-  /* Add your specific styles for small screens here */
-}
+  .header {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 85%);
+  }
 
-/* For screens up to 575px (iPhone SE and similar) */
-@media (max-width: 575px) {
-  /* Add your specific styles for iPhone SE-sized screens here */
-
-  /* Example: Adjust the font size for better readability on smaller screens */
   .header-name {
-    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .left-header {
+    height: 50%;
+    /* margin-top: 1.5%; */
+    text-align: center;
+    line-height: 0.76;
+    width: 100%;
+  }
+
+  .header-hello {
+    text-align: center;
   }
 
   .header-position {
-    font-size: 1.8rem;
+    text-align: center;
+    margin-left: 5%;
   }
 
-  .about-me-heading {
-    font-size: 2rem;
+  .right-header {
+    display: grid;
+    margin-top: 0%;
+    justify-content: left;
+    width: 100%;
+  }
+
+  .right-header img {
+    margin-left: 45%;
+    height: 50%;
+    /* width: 100%; */
+  }
+
+  .header-img {
+    margin-top: 0;
+  }
+
+  .about-me {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 100%);
+    margin-top: 40%;
+  }
+
+  .about-me-heading,
+  .about-me p {
+    text-align: center;
+  }
+
+  .about-btn {
+    margin-left: 38%;
+    margin-top: 2%;
+  }
+
+  .about-me-img {
+    display: none;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-bottom: 5%;
+    height: 50%;
+  }
+
+  .about-me-left {
+    display: none;
+    margin-top: 0%;
+    justify-content: left;
+    width: 100%;
+  }
+
+  .skills-list-heading {
+    margin-top: 0;
+  }
+
+  .skills-list {
+    margin-bottom: 18%;
+  }
+
+  /* .services-section {
+    margin-top: 10%;
   }
 
   .services-heading {
-    font-size: 2rem;
+    line-height: 1;
+  } */
+
+  .experience-section {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 26%);
+    height: 1250px;
+    /* margin-bottom: 10%; */
+    padding-bottom: 0%;
   }
 
-  .contact-heading {
-    font-size: 2rem;
+
+  .services-section {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 26%);
+    margin-top: 1%;
+    margin-bottom: 50%;
   }
+
+  .services-heading {
+    margin-top: 0%;
+    line-height: 1;
+    text-align: center;
+  }
+}
+
+/* For screens between 576px and 767px (small screens) */
+@media (min-width: 425px) and (max-width: 767px) {
+  /* Add your specific styles for small screens here */
+  .navbar {
+    display: flex;
+  }
+
+  .logo {
+    display: flex;
+    /* height: 100%; */
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  .hamburger {
+    text-align: right;
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-links {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+    left: -100%;
+    top: 1px;
+    /* padding: 0%;
+    margin: 0%; */
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 1;
+  }
+
+  .nav-links ul li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+  }
+
+  .mobile-links {
+    margin: 16px 0;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .header {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 85%);
+  }
+
+  .header-name {
+    text-align: center;
+    line-height: 1;
+  }
+
+  .left-header {
+    height: 50%;
+    margin-top: 22.5%;
+    text-align: center;
+    line-height: 0.76;
+    width: 100%;
+  }
+
+  .header-hello {
+    text-align: center;
+  }
+
+  .header-position {
+    text-align: center;
+    margin-left: 5%;
+  }
+
+  .right-header {
+    display: grid;
+    margin-top: 10%;
+    justify-content: left;
+    width: 100%;
+  }
+
+  .right-header img {
+    margin-left: 45%;
+    height: 30%;
+    /* width: 100%; */
+  }
+
+  .header-img {
+    margin-top: 10%;
+  }
+
+  .about-me {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 100%);
+    margin-top: 50%;
+  }
+
+  .about-me-heading,
+  .about-me p {
+    text-align: center;
+  }
+
+  .about-btn {
+    margin-left: 31%;
+    margin-top: 2%;
+  }
+
+  .about-me-img {
+    display: none;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-bottom: 5%;
+    height: 50%;
+  }
+
+  .about-me-left {
+    display: none;
+    margin-top: 0%;
+    justify-content: left;
+    width: 100%;
+  }
+
+  .skills-icons ul {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 40%);
+  }
+
+  .experience-section {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 26%);
+    height: 250px;
+    /* margin-bottom: 10%; */
+    padding-bottom: 0%;
+  }
+
+  .services-section {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 26%);
+    margin-top: 1%;
+    margin-bottom: 50%;
+  }
+
+  .services-heading {
+    line-height: 1;
+    text-align: center;
+  }
+
+  .content {
+    padding-top: 15%;
+    padding-bottom: 10%;
+  }
+
+  .content img {
+    width: 85%;
+  }
+
+  .contact-section {
+    padding-top: 15%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 50%;
+  }
+
+  textarea {
+    margin-right: 7%;
+  }
+}
+
+/* For screens up to 575px (iPhone SE and similar) */
+@media (min-width: 280px) and (max-width: 424px) {
+  /* Add your specific styles for iPhone SE-sized screens here */
+  .navbar {
+    display: flex;
+  }
+
+  .logo {
+    display: flex;
+    height: 100%;
+  }
+
+  .hamburger {
+    text-align: right;
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-links {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: fixed;
+    left: -130%;
+    top: 1px;
+    /* padding-left: 3%; */
+    /* padding-right: 1%; */
+    /* margin: 0%; */
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-links ul li {
+    font-size: 6px;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  .mobile-links {
+    margin: 16px 0;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .header {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 85%);
+  }
+
+  .header-name {
+    text-align: center;
+    line-height: 1;
+  }
+
+  .left-header {
+    height: 50%;
+    margin-top: 22.5%;
+    text-align: center;
+    line-height: 0.76;
+    width: 100%;
+  }
+
+  .header-hello {
+    text-align: center;
+  }
+
+  .header-position {
+    text-align: center;
+    margin-left: 5%;
+  }
+
+  .right-header {
+    display: grid;
+    margin-top: 10%;
+    justify-content: left;
+    width: 100%;
+  }
+
+  .right-header img {
+    margin-left: 45%;
+    height: 30%;
+    /* width: 100%; */
+  }
+
+  .header-img {
+    margin-top: 10%;
+  }
+
+  .about-me {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 100%);
+    margin-top: 50%;
+  }
+
+  .about-me-heading,
+  .about-me p {
+    text-align: center;
+  }
+
+  .about-btn {
+    margin-left: 31%;
+    margin-top: 2%;
+  }
+
+  .about-me-img {
+    display: none;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-bottom: 5%;
+    height: 50%;
+  }
+
+  .about-me-left {
+    display: none;
+    margin-top: 0%;
+    justify-content: left;
+    width: 100%;
+  }
+
+  .skills-list-heading {
+    margin-top: 50%;
+  }
+
+  .skills-icons ul {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 40%);
+    margin-bottom: 25%;
+  }
+
+  .experience-section {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 26%);
+    height: 1180px;
+    /* margin-bottom: 10%; */
+    padding-bottom: 0%;
+  }
+
+  .services-section {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 26%);
+    margin-top: 1%;
+    margin-bottom: 50%;
+  }
+
+  .services-heading {
+    line-height: 1;
+    text-align: center;
+  }
+
+  .content {
+    padding-top: 15%;
+    padding-bottom: 10%;
+  }
+
+  .content img {
+    width: 85%;
+  }
+
+  .contact-section {
+    padding-top: 15%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 50%;
+  }
+
+  textarea {
+    margin-right: 7%;
+  }
+
+  /* Example: Adjust the font size for better readability on smaller screens */
 }
