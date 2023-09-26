@@ -9,7 +9,6 @@ body {
   margin: 0% 5%;
   /* padding-top: 1%; */
 }
-
 .navbar,
 .logo,
 .nav-links,
@@ -24,6 +23,19 @@ body {
   align-content: center;
   /* justify-content: center; */
   align-items: center;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  background-color: #000;
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
 }
 
 .logo {
@@ -65,6 +77,23 @@ body {
   color: #4458dc;
 }
 
+.mobile-nav {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 3px 0;
+}
+
 .header {
   display: grid;
   color: black;
@@ -74,20 +103,30 @@ body {
 
 .left-header {
   margin-top: 10%;
+  text-align: left;
+  line-height: 0.5;
 }
 
 .header-hello {
   font-size: 2rem;
+  text-align: left;
 }
 
 .header-name {
   font-size: 3.65rem;
+  text-align: left;
+}
+
+.header-position {
+  margin-bottom: 5%;
+  text-align: left;
 }
 
 .header-img {
   height: 55%;
   margin-top: 15%;
   transition: all 1s ease;
+  /* margin-right: auto; */
   /* width: 50%; */
 }
 
@@ -489,4 +528,107 @@ input[type="submit"]:hover {
 .footer-section p {
   margin-top: 1.55%;
   margin-left: 4%;
+}
+
+/* For screens larger than 1200px (ultra-large displays) */
+@media (min-width: 1200px) {
+  /* Add your specific styles for ultra-large displays here */
+}
+
+/* For screens between 992px and 1199px (large screens) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Add your specific styles for large screens here */
+  .left-header {
+    line-height: 1;
+  }
+
+  .about-me-img {
+    height: 53%;
+  }
+
+  .about-me-heading {
+    font-size: xx-large;
+  }
+
+  .skills-list-heading {
+    line-height: 1;
+  }
+}
+
+/* For screens between 768px and 991px (medium screens) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Add your specific styles for medium screens here */
+  .navbar {
+    display: flex;
+  }
+
+  .logo {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: -100%;
+    top: 1px;
+    width: 119%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .mobile-links {
+    margin: 16px 0;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+}
+
+/* For screens between 576px and 767px (small screens) */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Add your specific styles for small screens here */
+}
+
+/* For screens up to 575px (iPhone SE and similar) */
+@media (max-width: 575px) {
+  /* Add your specific styles for iPhone SE-sized screens here */
+
+  /* Example: Adjust the font size for better readability on smaller screens */
+  .header-name {
+    font-size: 2.5rem;
+  }
+
+  .header-position {
+    font-size: 1.8rem;
+  }
+
+  .about-me-heading {
+    font-size: 2rem;
+  }
+
+  .services-heading {
+    font-size: 2rem;
+  }
+
+  .contact-heading {
+    font-size: 2rem;
+  }
 }

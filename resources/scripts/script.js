@@ -1,51 +1,15 @@
-// const allID = document.getElementById("all");
-// const natureID = document.getElementById("nature");
-// const architectureID = document.getElementById("architecture");
-// const peopleID = document.getElementById("people");
-
-// const imageContainer = document.querySelector(".image-container");
-// const natureImage = document.querySelectorAll(".nature");
-// const architectureImage = document.querySelectorAll(".architecture");
-// const peopleImage = document.querySelectorAll(".people");
-
-// allID.addEventListener("click", () => {
-//   imageContainer.style.display = "block";
-// });
-
-// natureID.addEventListener("click", () => {
-//   imageContainer.style.display = "none";
-//   natureImage.forEach((img) => {
-//     img.style.display = "block";
-//   });
-// });
-
-// architectureID.addEventListener("click", () => {
-//   imageContainer.style.display = "none";
-//   architectureImage.forEach((img) => {
-//     img.style.display = "block";
-//   });
-// });
-
-// peopleID.addEventListener("click", () => {
-//   imageContainer.style.display = "none";
-//   peopleImage.forEach((img) => {
-//     img.style.display = "block";
-//   });
-// });
-// i;
-
 filterSelection("all");
 function filterSelection(c) {
   let x, i;
   x = document.getElementsByClassName("column");
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
   }
 }
 
-function w3AddClass(element, name) {
+function AddClass(element, name) {
   let i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
@@ -56,7 +20,7 @@ function w3AddClass(element, name) {
   }
 }
 
-function w3RemoveClass(element, name) {
+function RemoveClass(element, name) {
   let i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="/resources/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="/resources/scripts/script.js"></script>
   </head>
   <body>
@@ -19,12 +23,17 @@
         </div>
         <div class="nav-links">
           <ul>
-            <li><a class="active" href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">PORTFOLIO</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a class="active mobile-links" href="#">HOME</a></li>
+            <li><a class="mobile-links" href="#">ABOUT</a></li>
+            <li><a class="mobile-links" href="#">SERVICES</a></li>
+            <li><a class="mobile-links" href="#">PORTFOLIO</a></li>
+            <li><a class="mobile-links" href="#">CONTACT</a></li>
           </ul>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </div>
     </nav>
@@ -289,6 +298,15 @@
         <p>Copyright ©2023 <br />All rights reserved</p>
       </div>
     </footer>
+    <script>
+      const navMenu = document.querySelector(".nav-links");
+      const hamburger = document.querySelector(".hamburger");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      });
+    </script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
