@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/resources/styles/services.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="/resources/scripts/script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <img
+            src="/resources/images/image-removebg-preview.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a class="active mobile-links" href="#">HOME</a></li>
+            <li>
+              <a class="mobile-links" href="/resources/pages/about.html"
+                >ABOUT</a
+              >
+            </li>
+            <li>
+              <a class="mobile-links" href="/resources/pages/services.html"
+                >SERVICES</a
+              >
+            </li>
+            <li><a class="mobile-links" href="#">PORTFOLIO</a></li>
+            <li><a class="mobile-links" href="#">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="skills-list">
+        <h1 class="skills-list-heading">
+          HERE ARE SOME OF THE TECHS I'VE WORKED ON!
+        </h1>
+        <div class="skills-icons">
+          <ul>
+            <a href=""><ion-icon name="logo-html5"></ion-icon></a>
+            <a href=""><ion-icon name="logo-css3"></ion-icon></a>
+            <a href=""><ion-icon name="logo-javascript"></ion-icon></a>
+            <a href=""><ion-icon name="logo-python"></ion-icon></a>
+            <a href=""><ion-icon name="analytics-outline"></ion-icon></a>
+            <!-- <a href=""><ion-icon name="logo-tableau"></ion-icon></a> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h1 class="services-heading">SERVICES</h1>
+      <div class="services-section">
+        <div>
+          <img src="/resources/images/s1.png" alt="" />
+          <h2>Website Development</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            inventore eveniet a voluptate
+          </p>
+        </div>
+        <div>
+          <img src="/resources/images/s2.png" alt="" />
+          <h2>Website Development</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            inventore eveniet a voluptate
+          </p>
+        </div>
+        <div>
+          <img src="/resources/images/s3.png" alt="" />
+          <h2>Website Development</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            inventore eveniet a voluptate
+          </p>
+        </div>
+        <div>
+          <img src="/resources/images/s1.png" alt="" />
+          <h2>Website Development</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            inventore eveniet a voluptate
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-section">
+        <img
+          src="/resources/images/image-removebg-preview.png"
+          alt=""
+          srcset=""
+        />
+        <ul>
+          <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href=""><ion-icon name="logo-github"></ion-icon></a>
+        </ul>
+        <p>Copyright ©2023 <br />All rights reserved</p>
+      </div>
+    </footer>
+    <script>
+      const navMenu = document.querySelector(".nav-links");
+      const hamburger = document.querySelector(".hamburger");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      });
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
